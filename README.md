@@ -22,6 +22,6 @@ npm start
 
 This process should result in your application running in a browser at http://localhost:3000.
 
-
+Note: This linkedIn Javascript API Domain is restricted only to run on localhost.
 
 
