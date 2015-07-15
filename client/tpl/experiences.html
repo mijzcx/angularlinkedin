@@ -1,0 +1,31 @@
+
+<div class="container-fluid">
+
+       
+    <div ng-repeat="value in positions.values">
+       
+        <div class="well">
+            <dl class="dl-horizontal">
+                
+                <dt>Years</dt>
+                <dd>{{value.startDate.year}} <span ng-show="value.isCurrent">to Present</span></dd>
+                
+                <dt>Company</dt>
+                <dd>{{value.company.name}}</dd>
+                
+                <dt>Title</dt>
+                <dd>{{value.title}}</dd>
+                
+                <dt>Description</dt>
+                <dd>{{value.description}}</dd>
+                
+                <dt>Summary</dt>
+                <dd>{{value.summary}}</dd>
+                
+            </dl>
+        </div>
+        
+     
+    </div>
+
+</div>

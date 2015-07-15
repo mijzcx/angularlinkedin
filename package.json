@@ -1,0 +1,13 @@
+{
+  "name": "angularlinkedin",
+  "description": "",
+  "version": "0.0.1",
+  "main": "./server.js",
+  "author": {
+    "name": "Melvin R. Zamora",
+    "email": "mijzcx@gmail.com"
+  },
+  "dependencies": {
+    "express": "^4.13.1"
+  }
+}

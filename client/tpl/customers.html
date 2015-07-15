@@ -1,0 +1,26 @@
+
+<br/>
+<div class="container-fluid">
+
+    <div class="tabbable tabs-left">
+
+        <ul class="nav nav-tabs">
+            <li ng-repeat="customer in customers.doc" 
+                ng-class="{active:$first}"
+                mijzcx-on-first="displayCustomerEmpHistory(customer.linkedInUrl)">
+                <a ng-click="displayCustomerEmpHistory(customer.linkedInUrl)" 
+                   data-toggle="tab">{{customer.customerName}}</a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active">
+                <ng:include src="'tpl/experiences.html'"></ng:include>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

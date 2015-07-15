@@ -1,0 +1,10 @@
+<div class="container-fluid">
+	<h1>{{profile.firstName}} {{profile.lastName}}</h1>
+	<a href="{{profile.publicProfileUrl}}" target="_blank"> 
+            <img class="img-polaroid" ng-src="{{profile.pictureUrl}}" src="img/spinner.gif"/>
+	</a>
+           
+</div>
+
+<ng:include src="'tpl/customers.html'"></ng:include>
+	

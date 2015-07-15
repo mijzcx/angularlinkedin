@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html ng-app="linkedInLoginApp">
+    <head>
+        <title>LinkedIn Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+
+        
+        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/vendor/angular.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/init.js"></script>
+    </head>
+    <body ng-controller="linkedInLoginCtrl" id="appBody">
+
+    <ng:include src="'tpl/header.html'"></ng:include>
+    <div id="loadingDiv"></div>
+    <div class="container-semifluid">
+        <div class="row-fluid">
+            <ng:view></ng:view>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
