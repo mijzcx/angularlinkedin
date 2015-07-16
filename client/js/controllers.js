@@ -7,6 +7,39 @@ linkedInLoginApp.controller('linkedInLoginCtrl',
   ['$scope', '$location', '$rootScope',
     function ($scope, $location, $rootScope) {
       
+       /**
+       * @function getMyLinkedInData
+       * @description Retrieve my personal data from linkedIn
+       */
+      $scope.getMyLinkedInData = function () {
+        
+        var v_fields = ["id", "firstName", "lastName", "pictureUrl", "publicProfileUrl"];
+        
+        var f_populate_result_to_main = function(result) {
+          $rootScope.$apply(function () {
+              
+            var userprofile = result.values[0];
+            $rootScope.userprofile = userprofile;
+            $rootScope.loggedUser = true;
+
+            $location.path("/main");
+          });
+        };
+        
+        var f_err = function (err) {
+          $scope.error = err;
+        };
+          
+
+        if (!$scope.hasOwnProperty("userprofile")) {
+          
+          IN.API.Profile("me")
+            .fields(v_fields)
+            .result(f_populate_result_to_main)
+            .error(f_err);
+    
+        }
+      }; // getMyLinkedInData
       
       /**
        * @function logoutLinkedIn
@@ -56,7 +89,6 @@ linkedInLoginApp.controller('linkedInLoginCtrl',
               
             var profile = result.values[0];
             $rootScope.profile = profile;
-            $rootScope.loggedUser = true;
             $rootScope.positions = profile.positions;
 
             $location.path("/main");

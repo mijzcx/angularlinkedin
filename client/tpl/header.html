@@ -5,9 +5,16 @@
                data-target=".nav-collapse"> <span class="icon-bar"></span> <span
                     class="icon-bar"></span> <span class="icon-bar"></span>
             </a> <a class="brand">Customer's Employment History</a>
-            <div class="nav-collapse collapse" ng-hide="profile == null" ng-model="debug">
-                <div class="pull-right">
 
+            <div class="nav-collapse collapse" ng-hide="userprofile == null" ng-model="debug">
+		<div class="pull-right">
+                    <span class="navbar-text ">
+	              	Login As, <a ng-href="{{userprofile.publicProfileUrl}}" class="navbar-link">{{userprofile.firstName}} {{userprofile.lastName}}</a>
+	            </span>
+                    
+                    <a href="{{userprofile.publicProfileUrl}}" target="_blank"> 
+                        <img class="img-polaroid user-profile-img" ng-src="{{userprofile.pictureUrl}}" style="" src="img/spinner.gif"/>
+                    </a>
                     <button class="btn btn-small btn-inverse" type="button" ng-click="logoutLinkedIn()">Logout</button>
                 </div>
             </div>

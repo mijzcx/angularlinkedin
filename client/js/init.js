@@ -42,7 +42,8 @@ linkedInLoginApp.run([function() {
     angular.element($("#appBody")).scope()
      .$apply(
         function ($scope) {
-          $scope.getCustomers();
+          $scope.getMyLinkedInData();
+          $scope.getCustomers();   
         }
     );
   };

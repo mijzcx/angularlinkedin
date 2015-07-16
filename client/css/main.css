@@ -1,9 +1,17 @@
 body {
-	padding-top: 60px;
-	padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 
-.container-fixed{
-	width: 900px;
-	margin: 0 auto;
+.container-fixed {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.user-profile-img {
+    width: 16px;
+    height: 16px;
+    margin-top: 7px;
+    margin-right: 7px;
+    margin-bottom: 5px;
 }
